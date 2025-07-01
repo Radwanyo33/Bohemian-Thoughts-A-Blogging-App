@@ -1,0 +1,12 @@
+
+{% extends "blog/base.html" %}
+
+{% block content %}
+<div class="content-section">
+    <h2>You have been logged out.</h2>
+    <p><a href="{% url 'login' %}">Log in again</a></p>
+</div>
+{% endblock %}
+<!-- This code is a Django template for a logout page. It extends a base template, defines a content block that displays a message indicating the user has been logged out, and provides a link to log in again. -->
+
+

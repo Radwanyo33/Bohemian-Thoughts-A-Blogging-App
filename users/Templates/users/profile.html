@@ -1,0 +1,14 @@
+{%extends "blog/base.html"%}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class = "content-section">
+    <div class = "media">
+        <di>
+            <h2 class = "account-heading">{{user.username}}</h2>
+        </di>
+    </div>
+</div>
+{% endblock %}
+<!-- This code is a Django template for a user registration page. It extends a base template, loads crispy forms tags for styling, and defines a content block that includes a form for user registration. The form uses POST method, includes CSRF protection, and displays the form fields using crispy forms. There is also a link to the login page for users who already have an account. -->
