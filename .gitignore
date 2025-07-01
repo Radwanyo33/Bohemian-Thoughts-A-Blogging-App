@@ -1,0 +1,21 @@
+# created by virtualenv automatically
+# Django
+*.pyc
+__pycache__/
+db.sqlite3
+/media/
+*.log
+
+# Environment
+.env
+venv/
+env/
+MyVenv/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
