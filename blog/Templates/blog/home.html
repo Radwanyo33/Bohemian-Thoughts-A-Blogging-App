@@ -1,0 +1,38 @@
+{%extends "blog/base.html"%}
+{% block content %}
+
+<div class="row mb-4">
+    <div class="col display-8">
+        <h1>Bohemian Thoughts</h1>
+        <p></strong>Welcome to the Bohemian Thoughts blog! Here you can find the daily thoughts of a Bohemian Person.Those might be meaningful or might be garbage.If you have the ability to respect the thoughts of others, then you are welcome here.....</strong></p>
+    </div>
+    <div class="col text-end">
+        <!-- Button to create a new post -->
+        <a href="{% url 'post-create' %}" class="btn btn-primary">Create New Post</a>
+    </div>
+</div>
+<div class = "row">
+   {% for post in posts %} <!-- Loop through the posts using jinja -->
+    <div class="col-md-6 mb-4">
+        <div class="content-section">
+            <h2>
+                <a href="{% url 'post-detail' post.pk %}">{{post.title}}</a> <!-- Link to the post details page -->
+            </h2>
+            <p>{{post.content}}</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <samll>{{post.created_at}}</small> <!-- Display the creation date of the post -->
+            </div>
+            <div class="btn-group">
+                <a href="{% url 'post-update' post.pk %}" class="btn btn-secondary">Edit</a> <!-- Link to edit the post -->
+                <a href="{% url 'post-delete' post.pk %}" class="btn btn-danger">Delete</a> <!-- Link to delete the post -->
+                
+            </div>
+                
+        </div>
+    </div>
+
+    {%endfor%}
+</div>
+
+ 
+{%endblock%}
